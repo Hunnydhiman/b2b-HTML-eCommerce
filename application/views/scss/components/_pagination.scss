@@ -1,0 +1,85 @@
+.pagination {
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+    // margin-top: 2rem;
+    // @include media-breakpoint-up(xl){
+    //     margin-top: 4rem;
+    // }
+    &.pagination--center {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%;
+    }
+    &.pagination--right {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+    li {
+        a {
+            width: 40px;
+            line-height: 40px;
+            text-align: center;
+            height: 40px;
+            display: block;
+            font-size: 1em;
+            border: none;
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 3px;
+            background-color: $brand-color-inverse; border:$border;
+            color: $text-dark;
+        }
+        &.selected {
+            a {
+               
+               border-color: $brand-color; color: $brand-color;
+            }
+        }
+        &.disabled {
+            opacity: 0.4;
+            a {
+                cursor: not-allowed;
+            }
+        }
+        &.prev {
+            a {
+                &:before {
+                    width: 12px;
+                    height: 12px;
+                    border-#{$start-direction}: 2px solid #333;
+                    border-bottom: 2px solid #333;
+                    position: absolute;
+                    #{$start-direction}: calc(50% - 3px);
+                    top: calc(50% - 6px);
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        &.next {
+            a {
+                &:before {
+                    width: 12px;
+                    height: 12px;
+                    border-#{$end-direction}: 2px solid #333;
+                    border-top: 2px solid #333;
+                    position: absolute;
+                    #{$start-direction}: calc(50% - 8px);
+                    top: calc(50% - 6px);
+                    -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+    [dir="rtl"] & {
+        i {
+            transform: rotate(180deg);
+        }
+    }
+
+}

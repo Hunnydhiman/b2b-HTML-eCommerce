@@ -1,0 +1,177 @@
+
+
+.checkbox,
+.radio {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 20px;
+    cursor: pointer;
+
+    &.brand {
+        display: flex;
+    }
+}
+
+.checkbox input,
+.radio input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top:0;
+    #{$end-direction}: 0;
+    bottom: 0;
+    #{$start-direction}: 0;
+    height: 18px;
+    width: 18px;
+    flex: 0 0 18px;
+    max-width: 18px;    
+    -webkit-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-#{$end-direction}: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+
+.checkbox input{border-radius: 4px;}
+
+.checkbox input:checked,
+.radio input:checked {
+    background: $brand-color;
+    color: $brand-color-inverse;
+}
+
+.checkbox input:checked::before,
+.radio input:checked::before {
+    height: 10px;
+    width: 6px;
+    position: absolute;
+    content: '';
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    line-height: 16px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left: 50%;
+    top: 50%;
+    margin: -6px 0 0 -3px;
+
+}
+
+.checkbox input:checked::after,
+.radio input:checked::after {
+    
+    background: $brand-color;
+    color: $brand-color-inverse;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
+.checkbox input:checked,
+.radio input:checked {
+    border-color: $brand-color;
+}
+
+.radio input {
+    border-radius: 50%;
+}
+
+.radio input::after {
+    border-radius: 50%;
+}
+
+
+
+
+
+/*toggles*/
+.switch-links {
+    text-align: center;
+    margin: 0px auto;
+    display: block;
+    position: relative;
+    max-width: 250px;
+}
+
+.switch-links a {
+    padding-top: 3px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    color: lighten($body-color, 50%);
+    font-size: 0.8em;
+}
+
+.switch-links a:first-child {
+    float: left;
+
+    margin-#{$end-direction}: 10px;
+}
+
+.switch-links a:last-child {
+
+    margin-#{$start-direction}: 10px;
+    float: right;
+}
+
+.switch-button {
+    position: relative;
+    width: 70px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 auto;
+}
+
+.switch-button:before {
+    content: "";
+    position: absolute;
+    background: #e6e6e6;
+    border-radius: 30px;
+    width: 70px;
+    height: 25px;
+    top: 0;
+    margin: 0 auto;
+    #{$start-direction}: 0;
+    #{$end-direction}: 0;
+}
+
+.switch-button:after {
+    background: $brand-color;
+    color: $brand-color-inverse;
+    width: 18px;
+    height: 18px;
+    display: block;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    #{$start-direction}: 4px;
+    top: 3px;
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+}
+
+.switch-button.is--active:after {
+    #{$start-direction}: auto;
+    #{$end-direction}: 4px;
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+}
+
+.switch-links a.is--active {
+    color: $brand-color;
+}

@@ -1,0 +1,18 @@
+.brands-logo {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 0 0.5rem;
+    background-color: #F2F2F2;
+   border-radius: 6px;
+    
+    height: 140px;
+    @include media-breakpoint-down(xl){
+        height: 120px;
+    }
+    img {
+        margin: auto;
+        mix-blend-mode: darken;
+    }
+}

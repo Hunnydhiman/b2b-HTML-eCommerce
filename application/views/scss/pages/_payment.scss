@@ -1,0 +1,181 @@
+// html,
+// body {
+//     height: 100%;
+//     min-height: 100%;
+//     /*background: #f7f7f7;*/
+// }
+
+.payment-page {
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.cc-payment {
+    background: #fff;
+    border: solid 1px #e1dfdf;
+    margin: 0 auto;
+    max-width: 600px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); padding: 1.5rem;
+}
+
+.logo-payment {
+    max-width: 200px;
+    text-align: center;
+    margin: 25px auto;
+}
+
+.logo-payment img,
+.logo-payment svg {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.reff p {
+    padding: 10px 0;
+}
+
+.payment-from {
+    border-top:none;
+    display: table;
+    width: 100%;
+    // padding: 15px;
+}
+
+.payment-from .siteForm label {
+    display: block;
+}
+
+.payment-from .siteForm input.type-bg {
+    background: url(images/cc-pay.png) no-repeat right center;
+}
+
+.payment-from .field {
+    margin-bottom: 15px;
+
+}
+
+.cvv {
+    float: left
+}
+
+.ccExpiryMonth,
+.ccExpiryYear {
+    float: left;
+}
+
+.expiry-wrapper,
+.ccCvvWrapper {
+    float: left;
+}
+
+.ccExpiryYear {
+    margin-#{$start-direction}: 20px;
+}
+
+.ccCvvWrapper {
+    width: 205px;
+    margin-#{$start-direction}: 50px;
+}
+
+.payment-from .siteForm input.ccCvvBox {
+    width: 119px;
+    margin-#{$end-direction}: 10px;
+    float: left;
+}
+
+.total-pay {
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.total-pay small {
+    font-size: 13px;
+    color: #333;
+}
+
+
+
+.payment-wrapper {
+    background: $gray-light;
+    border: $border;
+    border-radius: 4px;
+}
+
+.form--payment {
+    background: #fff;
+    border-radius: 4px;
+    border: $border;
+}
+
+
+
+.make-payment-wrapper {
+    border: 1px solid #ddd;
+    padding: 30px 50px;
+}
+
+.make-payment-wrapper .row > .column {
+    -webkit-padding-end: 30px;
+    -moz-padding-end: 30px;
+    padding-#{$end-direction}: 30px;
+}
+
+.make-payment-wrapper .payment_methods_list {
+    width: 100%;
+    position: static;
+    max-width: 100%;
+}
+
+.make-payment-wrapper .payment_methods_list ul {
+    display: block;
+    max-height: 390px;
+    overflow: auto;
+}
+
+.make-payment-wrapper .payment_methods_list ul li a {
+    padding: 15px 15px 15px 50px;
+    display: block;
+
+}
+
+.make-payment-wrapper .payment_methods_list ul li.is-active:after {
+    top: 17px;
+}
+
+
+.payment-load {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        content: "";
+        cursor: not-allowed;
+    }
+}
+
+
+@media (max-width:1023px) {
+    .payment-page {
+        height: auto; padding: 1rem;
+    }
+
+    .cc-payment {
+        -webkit-transform: none;
+        transform: none;
+        position: static;
+    }
+}

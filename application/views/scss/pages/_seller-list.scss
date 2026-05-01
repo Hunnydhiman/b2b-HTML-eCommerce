@@ -1,0 +1,241 @@
+.related-list{font-size: 0.9rem;
+    &__item{color:lighten($body-color, 40);}
+    & strong{font-weight: 500;}
+
+    @include media-breakpoint-down(sm) {
+        &{margin-bottom: 1.6rem;}
+    }
+
+}
+
+
+.seller-card{
+    position: relative;
+    
+    width: 100%; padding: calc(0.8rem + 0.8vw);
+  
+    border: $border-light;
+    margin-top: 1.4rem;
+    transition: none;
+    border-radius: 6px;
+    background-color: #fff;
+    &:hover {
+        @include media-breakpoint-up(xl) {
+            & {
+                // box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.08);
+            }
+        }
+    }
+
+    &__head{border-bottom: $border;min-height: 100px; padding-bottom: 1rem; margin-bottom: 2rem;}
+
+    @include media-breakpoint-down(sm) {
+        & {
+            &__body{display: none;}
+            &__head{border-bottom: none; margin-bottom: 0;}
+        }
+    }
+
+
+}
+
+
+
+.seller-view {
+    position: relative;
+    width: 100%;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 105px; width: 105px; 
+        border: $border;
+        border-radius: 4px;
+    }
+
+    &__title{
+        & a{color: inherit;}
+    }
+
+    @include media-breakpoint-up(sm) {
+        & {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            &__large {
+                width: calc(100% - 130px);
+                
+            }
+            &__meta {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                &-l {
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        & {
+
+
+            &__logo {
+  
+                height: 140px; width: 140px; 
+        
+            }
+
+            &__large {
+                width: calc(100% - 160px);
+                & .seller-badges--inline{margin-top: 0;}
+            }
+        
+
+            &__meta {display:block;
+               
+                &-l {
+                    max-width: 100%;
+                }
+                &-r {
+                    max-width:35%;
+                }
+            }
+
+
+            .panel-list {
+                &__item{
+                    &:not(:first-child) {
+                        margin-#{$start-direction}: 0.4rem;
+                        padding-#{$start-direction}: 0.4rem;
+                    }
+                    &:not(:last-child) {
+                        margin-#{$end-direction}:0;
+                        padding-#{$end-direction}:0;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        & {
+
+          
+            &__title{font-size: 1.1rem;}
+            &__logo {
+  
+                height: 100px; width:100px; margin: 0 auto 1.4rem;
+        
+            }
+
+            &__large {
+                width:100%; text-align: center;
+                & .seller-badges--inline{margin-top: 0;}
+            }
+        
+            .panel-list .btn {
+                font-size: 0; min-width:40px; min-height: 40px; display: flex; justify-content: center; align-items: center;
+            }
+            .seller-badges--inline {
+                justify-content: center; margin:1rem 0;
+            }
+
+            &__meta {
+               
+                &-l {
+                    max-width: 100%;
+                }
+                &-r {
+                    max-width: 100%;
+                }
+                & .btn{max-width: 250px; margin: 0 auto;}
+            }
+        }
+    }
+    
+    
+}
+
+
+.specs-table{
+    &{font-size: 0.9rem; color:lighten($body-color, 10); 
+        & th{font-weight: normal;color:lighten($body-color, 40); padding-bottom: 0.3rem;vertical-align: top;}
+        & td{ padding-bottom: 0.3rem;vertical-align: top;}
+    }
+}
+
+.products-container{
+    &{display: flex; align-items: flex-start;
+        &__item{flex: 0 0 33.3%; padding-#{$start-direction}: 1.6rem; max-width: 33.3%;}
+        & .product-media{border: none;
+            &.ratio > a{background-color: #f2f2f2;}
+            & img{mix-blend-mode: darken;}
+        }
+        & .product-title{text-overflow: none; white-space: normal; font-weight: normal; font-size: 0.75rem; line-height: 1.4;}
+    }
+}
+
+.related-products{
+    &{display: flex; align-items: flex-start; margin:1rem -1rem 0; flex-wrap: wrap;
+       
+        &__item{padding:0 1rem; flex: 0 0 20%; max-width: 20%; margin-bottom: 2rem;}
+        & .product-card__body{padding-top: 0.8rem;}
+        & .product-title{text-overflow: none; white-space: normal; font-weight: normal; font-size: 0.9rem; line-height: 1.4;}
+        @media(min-width:1399px){
+            display: block; margin: 0;
+            &__item{padding:0;flex: 0 0 100%; max-width: 100%;}
+            & .product-title{font-size: 0.75rem; line-height: 1.4;}
+            & .product-actions{left: 0; right: 0; transform: translate(0, -50%); flex-direction: row;
+                & .btn{margin: 2px; min-width: 1%; font-size: 0; padding: 0;width: 40px; height: 40px; line-height: 40px;
+                    .action-icon{margin: 0;}
+                }
+            }
+
+        }
+
+        @include media-breakpoint-down(lg) {
+           flex-wrap: nowrap; overflow: auto; white-space: nowrap; margin:1rem 0 0;
+            &__item{flex: 0 0 220px; max-width: 220px;padding:0; padding-right: 1.8rem;}
+            & .product-title{font-size: 0.9rem; line-height: 1.4;}
+            & .product-actions{left: 0; right: 0; transform: translate(0, -50%); flex-direction: row;
+                & .btn{margin: 2px; min-width: 1%; font-size: 0; padding: 0;width: 40px; height: 40px; line-height: 40px;
+                    .action-icon{margin: 0;}
+                }
+            }
+
+        }
+
+        @include media-breakpoint-down(sm) {
+           
+             &__item{flex: 0 0 170px; max-width:170px;}
+             
+ 
+         }
+
+    }
+}
+
+.cta-widget{
+    position: relative; width: 1005; border-radius: 4px; border: $border; min-height: 200px; margin-top: 1.4rem; background-color: #fff;
+    &__head{padding: 1.4rem;
+        & h6{color: $secondary-color; font-size: 1.2rem; font-weight: 500;}
+    }
+    &__body{padding:0 1.4rem;}
+    &__footer{padding: 1.4rem;}
+    &__item{font-size: 0.85rem;color:lighten($body-color, 30);
+        & strong{font-weight:600; display: block; font-size: 0.95rem;color:lighten($body-color, 10);}
+    }
+
+    @include media-breakpoint-down(lg) {
+        &{display: none;}
+    }
+
+}
+
+
+

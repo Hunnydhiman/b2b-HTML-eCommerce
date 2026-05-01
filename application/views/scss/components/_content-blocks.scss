@@ -1,0 +1,8 @@
+.section-cms{border-top: $border;
+    & h1{font-size: 1.6rem; margin-top:2rem;line-height: 1.4;margin-bottom: 1rem;}
+    & h2{font-size: 1.3rem; margin-top:2rem; margin-bottom: 1.2rem; line-height: 1.4;}
+    & h4{font-size: 1rem; margin-top: 0.4rem;line-height: 1.4;}
+    & h5, & h6{font-size:0.9rem; margin-top: 0.4rem;line-height: 1.4;}
+    & p{font-size: 14px; color: #777; line-height: 1.6; margin-bottom: 3rem;}
+    & .container{max-width: 1240px;}
+}

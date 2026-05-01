@@ -1,0 +1,33 @@
+.shop-card{position: relative; border: 1px solid #ddd; border-radius: 6px 6px 0 0;
+    &__head{position: relative; border-radius: 6px 6px 0 0; overflow: hidden; }
+    &__body{position: relative; border-top: none; padding: 1rem; border-radius: 0 0 6px 6px;}
+}
+
+
+
+.shop-logo{ border:1px solid #ddd;}
+
+.shop-meta{position: relative; display: flex; align-items: flex-start; justify-content: space-between;
+    &__small{width: 90px;}
+    &__large{width: calc(100% - 110px);}
+}
+
+.shop-media{
+    & img{width: 100%;}
+}
+.shop-details{display: flex;align-items: center; margin-top: 0.2rem;}
+.shop-location{font-size: 13px; opacity: 0.8;}
+.shop-ratings{margin-#{$start-direction}: 0.5rem; line-height: 1; margin-top: 2px; display: inline-flex!important;}
+.shop-title{ font-size: 15px;display: block;
+    white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: currentColor;
+            > a{ color: inherit; font-weight: 500;
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-offset: 1px;
+                }
+            }
+}
+.seller-catagory{border: 1px solid $secondary-color; padding: 3px 6px; display: inline-block;vertical-align: top; color: $secondary-color; font-size: 11px; margin: 0 5px; border-radius: 30px;}

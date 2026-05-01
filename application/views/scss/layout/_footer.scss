@@ -1,0 +1,221 @@
+.nav-vertical {
+    li {
+        color: inherit;
+        font-size: 0.875em;
+        font-weight: 300;
+        padding:4px 0;
+        display: block;
+        a { color: inherit;
+ 
+            font-size: inherit;
+            position: relative;
+            transition: all ease .3s;
+            &:hover {
+                color: $brand-color-inverse; text-decoration: underline;
+
+            }
+
+        }
+        @include media-breakpoint-down(sm){
+            &{padding: 0;
+               &  > a {padding:0.5rem 0; }
+            }
+        }
+        @include media-breakpoint-down(sm){
+            &{ font-size: 1rem; }
+        }
+    
+    }
+    &__item{display: flex; align-items: flex-start; opacity: 0.5;
+        .site-icon{margin-#{$end-direction}: 0.8rem;}
+        &:hover:not(span){opacity: 1;}
+    }
+
+
+
+}
+
+.nav-inline{
+    @include media-breakpoint-down(sm){
+        &{margin-bottom: 1.7rem;}
+    }
+    & ul{display: flex; align-items: flex-start; flex-wrap: wrap;
+        & li {
+            color: inherit;
+            font-size: 0.875rem;
+            font-weight: 300;
+     
+            display: block; margin-#{$end-direction}: 1.5rem; margin-top: 0.4rem;
+
+            @include media-breakpoint-down(sm){
+                &{ font-size: 0.9rem; margin: 0.5rem 0.8rem; margin-#{$start-direction}: 0;}
+            }
+
+            a { color: inherit;
+     
+                font-size: inherit;
+                position: relative;
+                transition: all ease .3s; opacity: 0.5;
+                &:hover {
+                    color: $brand-color-inverse; text-decoration: underline; opacity: 1;
+    
+                }
+
+                
+    
+            }
+           
+        }
+    }
+    &__more{
+        & > a{text-decoration: underline;}
+    }
+}
+
+.payment {
+    text-align: #{$end-direction};
+    @include media-breakpoint-down(lg) {
+        & {
+            text-align: center;
+        }
+    }
+    img {
+        display: inline-block;
+    }
+}
+
+
+.footer{position: relative;
+    & .container{max-width: 1240px;}
+    &__secondary{border-top: $border-light; min-height: 100px;padding: 3rem 0;}
+
+    &__primary{background-color: $secondary-color; color: $secondary-color-inverse; min-height: 400px; color: #fff;}
+    &-row{
+
+        @include media-breakpoint-up(sm){
+            &{padding:4rem 0;}
+             &--outlined{border-top: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1);}
+        }
+        @include media-breakpoint-down(sm){
+            &--outlined{padding: 0;}
+       }
+        &--last {background-color: rgba(255, 255, 255, 0.1); padding: 2rem 0;
+            & p{font-size: 14px; margin: 0; opacity: 0.7;
+                & > a {color: inherit; text-decoration: underline;}
+            }
+
+            @include media-breakpoint-down(sm){
+                &{margin-top: 2rem;
+                    & p{font-size: 12px; text-align: center;margin: 0.5rem 0;}
+                }
+            }
+        }
+    }
+
+    &-sitemap{position: relative;
+        &__title{position: relative; margin-bottom: 1rem; font-weight: 600; font-size: 1rem;
+           
+            @include media-breakpoint-down(sm){
+                &{ font-size: 1.1rem;}
+            }
+            @include media-breakpoint-down(sm){
+                &-trigger{
+                     &{padding: 1.3rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 0; cursor: pointer; position: relative;
+                        &:after{position: absolute; #{$end-direction}:0; top: 50%; transform: translateY(-50%); content: "+"; font-size: 1.4rem;}
+                        &.is-active:after{content: "-"; font-size: 2rem;}
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(sm){
+            &__title-target {display: none; padding-bottom: 1.5rem;} 
+        }
+    }
+    @include media-breakpoint-up(md){
+        &-flex{display: flex; align-items: flex-start; flex-wrap: wrap; justify-content: space-between;
+            &__colum{flex: 20%;}
+        
+            &__colum-large{flex: 60%;}
+            &__colum-small{flex: 40%;}
+        }
+    }
+
+    @include media-breakpoint-down(sm){
+        &-flex{ margin: 0!important; padding: 0!important;
+            &__colum-large{ padding-top:3.5rem; margin-bottom:2.6rem;border-top: 1px solid rgba(255, 255, 255, 0.1);}
+            &__colum-small{ margin-bottom: 3rem;}
+        }
+    }
+    
+
+}
+
+.site-meta{position: relative; display: flex; align-items: flex-start;justify-content: space-between;
+    &__media{width: 100px; height: 100px; display: flex; align-items: center; justify-content: center;}
+    &__content{width:calc(100% - 90px); padding-top: 1.4rem;
+        h6{font-weight: 600; font-size: 18px;}
+        p{font-size: 14px; opacity: 0.8;}
+    }
+
+    @include media-breakpoint-down(md){
+        &{margin: 0.5rem 0;
+            &__media{width: 70px; height: 70px;}
+            &__content{padding-top: 1rem;
+                h6{font-weight: 600; font-size: 15px;}
+                p{font-size: 13px; opacity: 0.8;}
+            }
+        }
+    }
+
+
+
+}
+
+.site-subscribe{position: relative; max-width: 550px; margin: 0 auto;
+    p{font-size: 14px; text-align: center;}
+    &__form{position: relative;
+        & .form{display: flex; align-items: flex-start; position: relative;
+            & .site-icon{position: absolute; #{$start-direction}: 0.7rem; top: 50%; transform: translateY(-50%);
+                & svg{fill:$brand-color;}
+            }
+            & .input-field{padding-#{$start-direction}: 2.4rem;height: 50px; width: 75%;border-top-#{$end-direction}-radius: 0;border-bottom-#{$end-direction}-radius: 0;
+             text-align: #{$start-direction};
+                &:focus{border-color: #fff;}
+            }
+            & .input-submit{width: 25%;height: 50px; background-color: $brand-color;border:1px solid #fff;border-top-#{$start-direction}-radius: 0;border-bottom-#{$start-direction}-radius: 0;
+        
+                @include media-breakpoint-up(xl){
+                    &:hover{
+                        background: $primary-color;
+                        color:$primary-color-inverse;
+                    }
+                }
+                
+            }
+        }
+    }
+    @include media-breakpoint-down(sm){
+        &{padding: 3rem 0 4rem;
+            &__form{
+                & .form{
+                    & .input-field{width: 68%;}
+                    & .input-submit{width: 32%;}
+                }
+              
+            }
+        }
+    }
+
+}
+
+
+.footer-actions{
+    @include media-breakpoint-down(sm){
+        & {
+            & .btn{display: block; margin: 0.7rem 0;}
+        }
+    }
+}
+
+

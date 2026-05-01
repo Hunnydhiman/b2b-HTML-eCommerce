@@ -1,0 +1,10 @@
+<svg id="tick" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="Rectangle_62" data-name="Rectangle 62" fill="#00a861" stroke="#00a861" stroke-width="2">
+    <rect width="16" height="16" rx="8" stroke="none"/>
+    <rect x="1" y="1" width="14" height="14" rx="7" fill="none"/>
+  </g>
+  <g id="tick-2" data-name="tick" transform="translate(9.312 2.358) rotate(45)">
+    <rect id="Rectangle_60" data-name="Rectangle 60" width="2" height="9" transform="translate(3.5 0)" fill="#fff"/>
+    <rect id="Rectangle_61" data-name="Rectangle 61" width="2" height="5" transform="translate(5 7) rotate(90)" fill="#fff"/>
+  </g>
+</svg>

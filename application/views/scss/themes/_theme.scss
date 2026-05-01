@@ -1,0 +1,32 @@
+
+@media (min-width: 1599px) {
+    .container {
+        max-width: 1630px;
+     }
+}
+
+@media (min-width: 1199px) {
+    .container {
+        width: 95%;
+    }
+}
+
+a{color: $brand-color;}
+
+.custom-select:focus{border-color: $brand-color;box-shadow: none;}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: $brand-color-inverse!important;
+    text-decoration: none;
+    background-color: $brand-color;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle{
+    color:  $brand-color-inverse;
+background-color:  $brand-color;
+border-color:  $brand-color;
+}
+
+#header-dashboard .btn.btn-outline-primary.dropdown-toggle{padding-#{$end-direction}: 2rem;
+    &:after{border-color: currentColor;}
+}

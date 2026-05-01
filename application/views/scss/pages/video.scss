@@ -1,0 +1,91 @@
+.page-banner {
+    &.banner-video {
+        text-align: #{$start-direction};
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+@include media-breakpoint-down(sm){
+    .banner-video.page-banner {
+        min-height: 200px;
+    }
+}
+
+.banner-video.page-banner::after {
+    background-color: rgba(36, 40, 56, 0.6);
+}
+
+.view-collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(216px, 1fr));
+    grid-gap: 1.5rem;
+    @include media-breakpoint-down(sm){
+        grid-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .products{
+        max-width: initial;
+        &.product-view {
+            .view-icon {
+                transition: 0.2s;
+            }
+            &:hover {
+                .view-icon {
+                    transform: translate(-50%, -50%) scale(1.2);
+                    transition: 0.2s;
+                    background-color: rgba(201, 0, 0, 1);
+                }
+            }
+        }
+        .products__quickview {
+            a {
+                height: 2.5rem;
+            }
+        }
+        .products__body {
+            .products__img {
+                margin-bottom: 0;
+            }
+        }
+        .products__footer {
+            padding: 1rem;
+        }
+    } 
+}
+
+.section-dark {
+    @include media-breakpoint-up(xl){
+        padding-block: 5rem;
+    }
+    /* ff 3.6+ */
+    background:-moz-linear-gradient(359deg, rgba(15, 76, 129, 1) 0%, rgba(11, 19, 66, 1) 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(359deg, rgba(15, 76, 129, 1) 0%, rgba(11, 19, 66, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(359deg, rgba(15, 76, 129, 1) 0%, rgba(11, 19, 66, 1) 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0F4C81', endColorstr='#0B1342', GradientType=1 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(359deg, rgba(15, 76, 129, 1) 0%, rgba(11, 19, 66, 1) 100%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(359deg, rgba(15, 76, 129, 1) 0%, rgba(11, 19, 66, 1) 100%);
+
+    .section-head {
+        display: block;
+        @include media-breakpoint-up(xl){
+            margin-bottom: 2.5rem;
+        }
+    }
+    .section__heading {
+        h2 {
+            color: $brand-color-inverse;
+        }
+    }
+}
